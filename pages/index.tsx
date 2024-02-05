@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useUser } from "../context/UserContext";
 import Signup from "../components/Signup";
 import Wallet from "../components/Wallet";
-import Footer from "../components/Footer";
 import MenuBar from "../components/MenuBar/MenuBar";
 import Hero from "../components/MenuBar/Hero";
 import Joinus from "../components/MenuBar/Joinus";
