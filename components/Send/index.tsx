@@ -133,9 +133,6 @@ const Send = ({ goBackToWallet }: SendProps): JSX.Element => {
                 <div className={styles.title}>
                     <h1>Send to</h1>
                 </div>
-                <div className={styles.image}>
-                    <img src="images/send-header.svg" alt="Send to" />
-                </div>
             </div>
 
             <form onSubmit={handleSubmit} className={styles.form}>

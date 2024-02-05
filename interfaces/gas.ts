@@ -1,10 +1,10 @@
 // See https://docs.ethgasstation.info/gas-price
 
 export enum GasSpeed {
-    safeLow = "safeLow",
-    average = "average",
-    fast = "fast",
-    fastest = "fastest",
+    safeLow = "SafeGasPrice",
+    average = "ProposeGasPrice",
+    fast = "FastGasPrice",
+    fastest = "suggestBaseFee",
 }
 
 export interface GasPrices {

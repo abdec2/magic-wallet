@@ -3,12 +3,12 @@ import useETHBalance from "../../hooks/useETHBalance";
 import useERC20Balances from "../../hooks/useERC20Balances";
 import { useLogout, useUser } from "../../context/UserContext";
 import { formatETH, formatERC20 } from "../../utils/format";
-
 import Send from "../Send";
 import Receive from "../Receive";
 import CopyUserAddress from "../CopyUserAddress/CopyUserAddress";
 
 import styles from "./Wallet.module.scss";
+import { Button, Image } from "react-bootstrap";
 
 const Wallet = (): JSX.Element | null => {
     const [send, setSend] = useState(false);
@@ -45,6 +45,15 @@ const Wallet = (): JSX.Element | null => {
 
     return (
         <section className={styles.wallet}>
+            <div className='d-flex flex-column align-items-center justify-content-center'>
+                <div className="emailForm__text p-3">
+                    <span className="text-primary">NordicPay</span>
+                </div>
+
+                <div className="emailForm__logo mb-3">
+                    <Image  src={'/images/logo.webp'} style={{border: 'none'}} thumbnail />
+                </div>
+            </div>
             <div className={styles.balance}>
                 <span>Your Balance</span>
                 <p className={styles.totalBalance}>
@@ -84,14 +93,13 @@ const Wallet = (): JSX.Element | null => {
                     ))}
                 </div>
             </div>
-            <div className={styles.buttons}>
-                <button onClick={() => setSend(true)}>Send</button>
-                <button onClick={() => setReceive(true)}>Receive</button>
+            <div className='d-flex align-items-center justify-content-between p-3 mb-3'>
+                <a href='https://crypto.link.com?ref=lb' target='_blank' className='btn btn-light'>Buy</a>
+                <button className='btn btn-light' onClick={() => setSend(true)}>Send</button>
+                <button className='btn btn-light' onClick={() => setReceive(true)}>Receive</button>
             </div>
             <div className={styles.logoutContainer}>
-                <button className={styles.logout} onClick={logout}>
-                    Logout
-                </button>
+                <Button variant="primary" type="submit" className="w-100 rounded-pill" onClick={logout}>Logout</Button>
             </div>
         </section>
     );

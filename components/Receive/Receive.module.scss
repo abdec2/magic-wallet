@@ -1,8 +1,10 @@
 @import '../../styles/partials/header.scss';
 
 .receive {
-  min-height: 100vh;
-  
+  max-width: 432px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;  
   
   .header {
     @include header();
